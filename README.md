@@ -1,6 +1,6 @@
 # Readcraft — README Generator
 
-> Craft a README developers respect. In seconds. No API key. No sign up. Completely free.
+> Paste a GitHub link. Get a perfect README. In seconds.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-6ee7b7?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-6ee7b7?style=flat-square)
@@ -8,68 +8,89 @@
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![No Dependencies](https://img.shields.io/badge/dependencies-none-6ee7b7?style=flat-square)
+![No API Key](https://img.shields.io/badge/API%20key-not%20required-6ee7b7?style=flat-square)
 
 ---
 
-## 📖 What is Readcraft?
+## 📖 About
 
-Readcraft is a free, browser-based README generator built for developers who hate writing documentation.
+Readcraft is a free browser-based README generator built for developers who hate writing documentation.
 
-You fill in your project name, description, tech stack, and features. You pick the sections you want. You choose your tone. Hit Generate — and get a clean, professional `README.md` instantly. No API key. No login. No setup. Just open and go.
-
-It works entirely in your browser using a smart template engine that turns your inputs into a fully structured, production-ready README with real code blocks, shields.io badges, table of contents, and more.
+Paste your public GitHub repo URL and Readcraft automatically fetches your project name, description, tech stack, languages, license, and features — then generates a clean professional `README.md` in under a second. No sign up. No API key. No setup. Works completely offline.
 
 ---
 
 ## ✨ Features
 
-- ⚡ **Instant generation** — README appears in under 1 second, no API calls
-- 🎨 **Smart badge detection** — automatically generates shields.io badges for 30+ tech stacks
+- 🔗 **GitHub Auto-Fill** — paste any public GitHub URL and the form fills itself automatically
+- ⚡ **Instant generation** — README ready in under 1 second, no API calls
+- 🎨 **Smart badge detection** — auto-generates shields.io badges for 30+ tech stacks
+- 📊 **Live repo stats** — pulls stars, forks, and watchers directly from GitHub
 - 📋 **12 sections** — Badges, Demo, Installation, Usage, API Docs, Configuration, Contributing, License, Roadmap, FAQ, Credits, Changelog
 - 🎭 **4 writing tones** — Professional, Friendly, Minimal, Fun
 - 👁 **Live Preview** — switch between raw Markdown and rendered preview
-- 📋 **One-click Copy** — copy the raw Markdown instantly
-- 💾 **Download as .md** — save directly to your machine
-- ✨ **Improve with AI** — generates a ready-to-paste prompt for ChatGPT or Claude to polish your README further
-- ⌨️ **Keyboard shortcut** — `Ctrl+Enter` to generate instantly
+- 📋 **One-click Copy** — copy raw Markdown instantly
+- 💾 **Download as .md** — save the file directly to your machine
+- ✨ **Improve with AI** — generates a ready-to-paste prompt for ChatGPT or Claude to polish it further
+- ⌨️ **Keyboard shortcut** — press `Ctrl+Enter` to generate instantly
 - 📱 **Fully responsive** — works on mobile and desktop
-- 🔒 **100% private** — nothing is sent anywhere, works completely offline
+- 🔒 **100% private** — nothing sent to any server, ever
 
 ---
-## 📋 How to Use
 
-**Step 1** — Open the app in your browser
+## 🕹 How to Use
 
-**Step 2** — Fill in your project details:
-- **Project Name** — your repo name
-- **Description** — one line about what it does
-- **Tech Stack** — e.g. `React, Node.js, Docker`
-- **Key Features** — one feature per line
-- **Installation Steps** — your setup commands
-- **Usage Example** — how to run it
-- **GitHub Username** — for badge and link generation
-- **Repository Name** — your repo slug
+### Option 1 — GitHub Auto-Fill (Recommended)
+1. Open the app in your browser
+2. Paste any public GitHub repo URL
+https://github.com/username/repo-name
 
-**Step 3** — Choose your license and tone
+3. Click **Fetch Repo →**
+4. Everything fills in automatically
+5. Click **Generate README**
+6. Click **Copy** or **Download .md**
+7. Paste into your GitHub repo ✅
 
-**Step 4** — Check the sections you want included
+### Option 2 — Fill Manually
 
-**Step 5** — Hit **Generate README** or press `Ctrl+Enter`
+1. Open the app
+2. Fill in your Project Name and Description
+3. Add your tech stack, features, and install steps
+4. Choose your sections and tone
+5. Click **Generate README** or press `Ctrl+Enter`
+6. Copy or download the result
 
-**Step 6** — Click **Copy** and paste into your GitHub repo, or click **Download .md** to save the file
+---
 
-**Step 7 (optional)** — Click **✨ Improve with AI** to get a prompt you can paste into ChatGPT or Claude for free to make it even better
+## 🔘 Buttons Explained
+
+| Button | What it does |
+|---|---|
+| **Fetch Repo →** | Reads your GitHub repo and fills the form automatically |
+| **Generate README** | Builds your full README instantly |
+| **Markdown** | Shows the raw Markdown code |
+| **Preview** | Shows how it looks when rendered on GitHub |
+| **Copy** | Copies the README to your clipboard |
+| **Download .md** | Saves it as a file on your computer |
+| **✨ Improve with AI** | Generates a prompt to paste into ChatGPT or Claude for free |
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+|---|---|
+| `Ctrl + Enter` | Generate README instantly |
+| `Escape` | Close the AI modal |
 
 ---
 
 ## 📁 Project Structure
-
 readcraft/
-├── index.html    ← app structure and layout
-├── style.css     ← all styling and dark theme
-├── app.js        ← template engine, logic, markdown parser
+├── index.html    ← app layout and structure
+├── style.css     ← dark theme and all styling
+├── app.js        ← GitHub fetcher, template engine, markdown parser
 └── README.md     ← this file
-
 ---
 
 ## 🛠 Tech Stack
@@ -78,7 +99,7 @@ readcraft/
 |---|---|
 | HTML | App structure and layout |
 | CSS | Dark theme, animations, responsive design |
-| Vanilla JavaScript | Template engine, badge generator, markdown parser |
+| Vanilla JavaScript | GitHub API, template engine, badge generator, markdown parser |
 
 **Zero dependencies. Zero frameworks. Zero build tools. Zero APIs.**
 
@@ -88,63 +109,40 @@ The entire app is 3 files. That's it.
 
 ## 🔧 How It Works
 
-Readcraft uses a **smart template engine** built in vanilla JavaScript.
+**GitHub Auto-Fill**
+When you paste a repo URL, Readcraft calls three free GitHub public API endpoints simultaneously — repo info, languages, and file contents. It extracts the name, description, topics, languages, and license. It also detects files like `Dockerfile`, `package.json`, and test folders to auto-generate relevant features and install commands.
 
-When you hit Generate:
+**Template Engine**
+The smart template engine reads all your inputs and builds each README section using intelligent templates filled with your actual data — not generic placeholder text. It detects your tech stack and generates the correct install commands, usage examples, and shields.io badges automatically.
 
-1. It reads all your form inputs
-2. Detects your tech stack keywords and maps them to the correct shields.io badges
-3. Builds each selected section using intelligent templates that use your actual inputs — not generic placeholder text
-4. Assembles the full Markdown document
-5. Renders it instantly in the output panel
-
-The **Improve with AI** button takes your generated README and builds a detailed prompt containing your full README and project context. You copy it, paste it into ChatGPT or Claude (both free), and get an AI-polished version back in seconds.
+**Improve with AI**
+After generating, the Improve with AI button assembles your full README and project context into a perfectly crafted prompt. Paste it into ChatGPT or Claude for free and get a polished version back in seconds.
 
 ---
 
-## ✅ Pros
+## ✅ Pros and Cons
 
+**Pros**
 - Zero setup — open in browser and go
-- Works 100% offline
-- No API cost — free for everyone forever
-- Single file architecture — easy to maintain
-- Privacy friendly — nothing leaves your browser
-- Fast — generates in under 1 second
+- Works 100% offline after first load
+- Free forever — no API cost, no subscriptions
+- Privacy friendly — nothing ever leaves your browser
+- Generates in under 1 second
 
-## ❌ Cons
-
-- Output is template-based — may need manual tweaks for very unique projects
+**Cons**
+- Only works with public GitHub repos
+- Output may need minor tweaks for very unique projects
 - No saved history — download before closing the tab
-- No collaboration features
 
 ---
 
 ## 🗺️ Roadmap
 
+- [ ] Support private repos with GitHub personal access token
 - [ ] Save README history to local storage
-- [ ] More section templates
-- [ ] GitHub direct push integration
-- [ ] Custom color themes
-- [ ] Template presets for common project types (CLI tool, REST API, mobile app, etc.)
+- [ ] Push README directly to GitHub repo
+- [ ] Template presets for CLI tools, REST APIs, npm packages
 - [ ] Export as PDF
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-```bash
-# 1. Fork the repo
-# 2. Create your branch
-git checkout -b feature/your-feature
-
-# 3. Commit your changes
-git commit -m "feat: your feature description"
-
-# 4. Push and open a PR
-git push origin feature/your-feature
-```
 
 ---
 
@@ -156,8 +154,11 @@ MIT License — free to use, modify, and distribute.
 
 ## 👨‍💻 Author
 
-Built by AnshikaCraftCode
+Built by [your-username](https://github.com/your-username)
 
 ---
 
-> ⭐ If Readcraft saved you time, drop a star on the repo. It helps more developers find it!
+> ⭐ If Readcraft saved you time, drop a star. It helps more developers find it!
+
+1. Open the app in your browser
+2. Paste any public GitHub repo URL
